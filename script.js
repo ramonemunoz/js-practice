@@ -99,3 +99,24 @@ var nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1];
 wr(nums);
 wr(mergeSort(nums));
 wr();
+
+wr('Quick Sort');
+const quickSort = nums => {
+	if (nums.length <= 1) return nums;
+
+	const pivot = nums[nums.length - 1];
+	const left = [];
+	const right = [];
+
+	for (let i = 0; i < nums.length - 1; i++) {
+		if (nums[i] < pivot) {
+			left.push(nums[i]);
+		} else {
+			right.push(nums[i]);
+		}
+	}
+	return [...quickSort(left), pivot, ...quickSort(right)];
+};
+wr(nums);
+wr(quickSort(nums));
+wr();
