@@ -120,3 +120,11 @@ const quickSort = nums => {
 wr(nums);
 wr(quickSort(nums));
 wr();
+
+wr('Data Structures - Interfaces');
+wr('Set');
+wr('Map');
+wr('Stack');
+wr('Queue');
+
+wr('Data Structures - Implementations');
